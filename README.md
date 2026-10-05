@@ -27,7 +27,7 @@ This repository is intended to grow with my C++ knowledge.
 
 The repository currently contains different collections of C++ learning material:
 
-### 1. 20 Day C++ Problem Solving
+### 1. 20-Day C++ Problem Solving (`20-day-problem-solving/`)
 
 A collection of C++ problems solved as part of regular programming practice.
 
@@ -40,7 +40,7 @@ A collection of C++ problems solved as part of regular programming practice.
 
 ---
 
-### 2. C++ Classroom
+### 2. C++ Classroom (`cpp-classroom/`)
 
 Programs and exercises related to classroom learning.
 
@@ -52,7 +52,7 @@ Programs and exercises related to classroom learning.
 
 ---
 
-### 3. College C++
+### 3. College C++ (`college-cpp/`)
 
 C++ programs and assignments created during college coursework.
 
@@ -66,11 +66,15 @@ C++ programs and assignments created during college coursework.
 
 ---
 
-### 4. Additional Learning Collections
+### 4. C++ Tutorial Series (`cpp-tutorials/`)
 
-The repository also contains material collected and practiced from different learning resources.
+Sequential C++ lessons and example programs covering topics from functions through the STL.
 
-These sections may be reorganized over time as the repository becomes more structured.
+### 5. C++ Practice Exercises (`cpp-practice-exercises/`)
+
+Standalone practice programs, including array, structure, and general C++ exercises.
+
+Day folders in the problem-solving collection use the `day-01` through `day-20` naming pattern.
 
 ---
 
