@@ -11,6 +11,6 @@ int main() {
         {"Sara", 90},
         {"Hamza", 75}
     };
-    for (const auto& x : s)
+    for (const auto x : s)
         cout << x.name << " " << x.marks << endl;
 }
