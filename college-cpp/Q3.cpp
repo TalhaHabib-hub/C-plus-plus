@@ -30,6 +30,6 @@ int main() {
 
     t3.add_time(t1, t2);
     t3.display();
-
+    t3.h;
     return 0;
 }
