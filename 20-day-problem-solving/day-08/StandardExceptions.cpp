@@ -23,12 +23,12 @@ int main() {
     }
 
     // bad_alloc (memory fail)
-    try {
-        int* p = new int[1000000000000];
-    }
-    catch (bad_alloc& e) {
-        cout << "Memory error: " << e.what() << endl;
-    }
+    // try {
+    //     int* p = new int[1000000000000];
+    // }
+    // catch (bad_alloc& e) {
+    //     cout << "Memory error: " << e.what() << endl;
+    // }
 
     // catching through the base class
     try {
