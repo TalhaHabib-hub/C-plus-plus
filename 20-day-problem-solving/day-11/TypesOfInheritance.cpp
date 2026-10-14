@@ -1,4 +1,5 @@
 //program covering single, multilevel, multiple, hierarchical, and hybrid inheritance
+//Fazal Hayat
 #include <iostream>
 #include <string>
 using namespace std;
