@@ -15,4 +15,7 @@ int main() {
     C c;
     c.A::show();
     cout << " ";
+     c.B::show();
+}
+
     
