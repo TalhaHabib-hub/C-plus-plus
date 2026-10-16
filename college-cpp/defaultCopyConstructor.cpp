@@ -7,12 +7,13 @@ private:
     int* b;
 
 public:
-    CopyConstructor(int x, int y) : a(x), b(new int(y)) {}
+    // CopyConstructor(int x, int y) : a(x), b(new int(y)) {}
+    CopyConstructor(int x, int y):a(x), b(new int(;y) {})
 
     // Copy the value pointed to by other.b into a new allocation.
     // This makes the two objects independent (a deep copy).
     CopyConstructor(const CopyConstructor& other)
-        : a(other.a), b(new int(*other.b)) {}
+        : a(other.a), b(new int(*other.b)) {}// b = new int(*other.b);
 
     ~CopyConstructor() {
         delete b;
