@@ -18,7 +18,7 @@ public:
     void draw() const override { cout << "Square is drawn \n"; }
 };
 int main() {
-    vector<unique_ptr<Shape>> shapes;
+    vector<unique_ptr<Shape>> shapes; 
     shapes.push_back(make_unique<Circle>());
     shapes.push_back(make_unique<Square>());
     for (const auto& s : shapes) s->draw();
