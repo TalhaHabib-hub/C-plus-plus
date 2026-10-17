@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f4">
+    <title>Islamic Bank — Personal banking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main id="home-page" class="home-page">
+      <header class="home-header">
+        <a class="brand home-brand" href="#" aria-label="Islamic Bank home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5a4.3 4.3 0 1 0 4.3 4.3A3.5 3.5 0 0 1 24 3.5Z"/><path d="M7 19.5 10.5 12l3.5 7.5M34 19.5l3.5-7.5 3.5 7.5M10.5 19.5v17m27-17v17M7 36.5h7m20 0h7M16 25c0-7 3.2-12 8-15 4.8 3 8 8 8 15v11.5H16V25Z"/><path d="M21 36.5v-5a3 3 0 0 1 6 0v5M5 40h38"/></svg></span>
+          <span>Islamic Bank<span class="brand-period">.</span></span>
+        </a>
+        <button class="button button-outline" id="open-login-dialog" type="button">Existing customer <span aria-hidden="true">→</span></button>
+      </header>
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="hero-dot"></span> SIMPLE, PERSONAL BANKING</p>
+          <h1 id="home-title">A thoughtful home<br>for <span>your money.</span></h1>
+          <p class="hero-description">Manage your account with clarity. Create an account to get started, or sign in to continue where you left off.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="home-create-account" type="button"><span class="button-plus" aria-hidden="true">+</span> Create an account</button>
+            <button class="text-action" id="home-existing-customer" type="button">I already have an account <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="hero-promise"><span aria-hidden="true">✳</span> Your account stays on this device while the C++ server is running.</div>
+        </div>
+        <div class="hero-art" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Faith and community">
+          <figure class="hero-slide active" aria-hidden="false">
+            <img src="images/mosque.jpg" alt="Worshippers gathered beside the mosque's ornate arched entrance">
+            <figcaption class="hero-caption">
+              <span class="slide-kicker">MOSQUE &amp; ARCHITECTURE</span>
+              <strong>A place of peace.</strong>
+              <span>Spaces for reflection and belonging.</span>
+            </figcaption>
+          </figure>
+          <figure class="hero-slide" aria-hidden="true">
+            <img src="images/faith.jpg" alt="Pilgrims in prayer beside detailed Islamic calligraphy">
+            <figcaption class="hero-caption">
+              <span class="slide-kicker">FAITH &amp; REFLECTION</span>
+              <strong>Room to reflect.</strong>
+              <span>Tradition, care, and a sense of purpose.</span>
+            </figcaption>
+          </figure>
+          <figure class="hero-slide" aria-hidden="true">
+            <img src="images/community.jpg" alt="A diverse congregation gathered together in prayer">
+            <figcaption class="hero-caption">
+              <span class="slide-kicker">PEOPLE &amp; COMMUNITY</span>
+              <strong>Stronger together.</strong>
+              <span>A community connected through faith.</span>
+            </figcaption>
+          </figure>
+          <div class="carousel-controls" aria-label="Slideshow controls">
+            <button class="carousel-arrow" id="previous-slide" type="button" aria-label="Previous image">←</button>
+            <div class="carousel-dots" aria-label="Choose an image">
+              <button class="carousel-dot active" type="button" aria-label="Show mosque and architecture image" aria-current="true"></button>
+              <button class="carousel-dot" type="button" aria-label="Show faith and reflection image"></button>
+              <button class="carousel-dot" type="button" aria-label="Show people and community image"></button>
+            </div>
+            <button class="carousel-pause" id="pause-slideshow" type="button" aria-label="Pause slideshow">Ⅱ</button>
+            <button class="carousel-arrow" id="next-slide" type="button" aria-label="Next image">→</button>
+          </div>
+        </div>
+      </section>
+      <footer class="home-footer"><span>Islamic Bank <span class="footer-separator">·</span> Personal banking</span><span>Simple, clear, and close to home.</span></footer>
+    </main>
+
+    <div class="app-shell" id="account-page" hidden>
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" id="brand-home" href="#" aria-label="Islamic Bank home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5a4.3 4.3 0 1 0 4.3 4.3A3.5 3.5 0 0 1 24 3.5Z"/><path d="M7 19.5 10.5 12l3.5 7.5M34 19.5l3.5-7.5 3.5 7.5M10.5 19.5v17m27-17v17M7 36.5h7m20 0h7M16 25c0-7 3.2-12 8-15 4.8 3 8 8 8 15v11.5H16V25Z"/><path d="M21 36.5v-5a3 3 0 0 1 6 0v5M5 40h38"/></svg></span>
+          <span>Islamic Bank<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="navigation">
+          <a class="nav-link active" href="#overview" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+            Overview
+          </a>
+          <a class="nav-link" href="#activity">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h10"/><circle cx="18" cy="17.5" r="2.5"/></svg>
+            Activity
+          </a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-note">
+          <div class="note-icon" aria-hidden="true">✳</div>
+          <p class="note-title">A little more clarity.</p>
+          <p class="note-copy">Your money, thoughtfully organized.</p>
+        </div>
+        <div class="profile">
+          <div class="avatar" id="avatar-initials" aria-hidden="true">I</div>
+          <div class="profile-copy">
+            <strong id="profile-name">Account holder</strong>
+            <span>Personal account</span>
+          </div>
+          <button class="profile-home-button" id="close-account" type="button">Home</button>
+        </div>
+      </aside>
+
+      <main id="overview" class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-divider">/</span><strong>Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="secure-label"><span class="secure-dot"></span> Private workspace</span>
+            <button class="button button-outline return-home" id="return-home" type="button">Return home</button>
+            <button class="icon-button" type="button" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+              <span class="notification-dot"></span>
+            </button>
+          </div>
+
+        </header>
+
+        <section class="welcome-row">
+          <div>
+            <p class="eyebrow" id="today-label">YOUR FINANCES, AT A GLANCE</p>
+            <h1>Welcome back, <span id="account-greeting">there.</span></h1>
+            <p class="welcome-copy">Here is your personal account overview.</p>
+          </div>
+          <button class="button button-primary" id="open-account-dialog" type="button">
+            <span class="button-plus" aria-hidden="true">+</span>
+            Create account
+          </button>
+        </section>
+
+        <section class="summary-grid" aria-label="Account summary">
+          <article class="balance-card">
+            <div class="balance-card-top">
+              <span class="card-label">TOTAL BALANCE</span>
+              <span class="balance-badge"><span class="badge-dot"></span><span id="account-status">No account yet</span></span>
+            </div>
+            <p class="balance-amount" id="total-balance">$0.00</p>
+            <div class="balance-card-bottom">
+              <span id="active-account-label">Create an account to get started</span>
+              <span class="balance-decoration" aria-hidden="true">✳</span>
+            </div>
+          </article>
+
+          <article class="summary-card">
+            <div class="summary-card-heading">
+              <span class="summary-icon deposit-icon" aria-hidden="true">↘</span>
+              <span class="card-label">TOTAL DEPOSITS</span>
+            </div>
+            <p class="summary-value" id="total-deposits">$0.00</p>
+            <p class="summary-footnote">Across this account</p>
+          </article>
+
+          <article class="summary-card">
+            <div class="summary-card-heading">
+              <span class="summary-icon withdrawal-icon" aria-hidden="true">↗</span>
+              <span class="card-label">TOTAL WITHDRAWALS</span>
+            </div>
+            <p class="summary-value" id="total-withdrawals">$0.00</p>
+            <p class="summary-footnote">Across this account</p>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel activity-panel" id="activity">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">YOUR MONEY IN MOTION</p>
+                <h2>Recent activity</h2>
+              </div>
+              <span class="activity-count" id="activity-count">0 entries</span>
+            </div>
+            <div class="transaction-list" id="transaction-list" aria-live="polite"></div>
+          </article>
+
+          <aside class="panel action-panel" aria-labelledby="action-title">
+            <div class="panel-heading action-heading">
+              <div>
+                <p class="eyebrow">QUICK ACTIONS</p>
+                <h2 id="action-title">Move money</h2>
+              </div>
+              <span class="action-spark" aria-hidden="true">✳</span>
+            </div>
+            <div class="action-tabs" role="tablist" aria-label="Choose an action">
+              <button class="action-tab selected" id="deposit-tab" type="button" role="tab" aria-selected="true" aria-controls="action-form" data-action="deposit">Deposit</button>
+              <button class="action-tab" id="withdraw-tab" type="button" role="tab" aria-selected="false" aria-controls="action-form" data-action="withdraw">Withdraw</button>
+            </div>
+            <form id="action-form">
+              <label class="field-label" for="action-amount">Amount</label>
+              <div class="amount-input-wrap">
+                <span aria-hidden="true">$</span>
+                <input id="action-amount" name="amount" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="0.00" required>
+              </div>
+              <p class="field-hint" id="action-hint">Add funds to your latest account.</p>
+              <button class="button button-dark action-submit" id="action-submit" type="submit" disabled>Deposit funds <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="action-footnote"><span class="lock-icon" aria-hidden="true">◇</span> Transactions use the local C++ server.</p>
+          </aside>
+        </section>
+
+        <footer class="page-footer">
+          <span>Designed for a clearer everyday.</span>
+          <span>Islamic Bank <span class="footer-separator">·</span> Local C++ server</span>
+        </footer>
+      </main>
+    </div>
+
+    <dialog class="account-dialog" id="login-dialog" aria-labelledby="login-title">
+      <form id="login-form">
+        <div class="dialog-top">
+          <span class="dialog-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5a4.3 4.3 0 1 0 4.3 4.3A3.5 3.5 0 0 1 24 3.5Z"/><path d="M7 19.5 10.5 12l3.5 7.5M34 19.5l3.5-7.5 3.5 7.5M10.5 19.5v17m27-17v17M7 36.5h7m20 0h7M16 25c0-7 3.2-12 8-15 4.8 3 8 8 8 15v11.5H16V25Z"/><path d="M21 36.5v-5a3 3 0 0 1 6 0v5M5 40h38"/></svg></span>
+          <button class="dialog-close" id="close-login-dialog" type="button" aria-label="Close dialog">×</button>
+        </div>
+        <p class="eyebrow">WELCOME BACK</p>
+        <h2 id="login-title">Sign in to your account</h2>
+        <p class="dialog-copy">Enter the name and account number you used when you opened your account.</p>
+        <label class="field-label" for="login-name">Account holder name</label>
+        <input class="text-input" id="login-name" name="name" type="text" autocomplete="name" maxlength="60" placeholder="Enter your name" required>
+        <label class="field-label" for="login-id">Account number</label>
+        <input class="text-input" id="login-id" name="id" type="number" min="1" step="1" inputmode="numeric" placeholder="Enter your account number" required>
+        <p class="form-error" id="login-error" role="alert"></p>
+        <button class="button button-primary dialog-submit" type="submit">Open my account <span aria-hidden="true">→</span></button>
+      </form>
+    </dialog>
+
+    <dialog class="account-dialog" id="account-dialog" aria-labelledby="dialog-title">
+      <form id="account-form">
+        <div class="dialog-top">
+          <span class="dialog-icon" aria-hidden="true">✳</span>
+          <button class="dialog-close" id="close-account-dialog" type="button" aria-label="Close dialog">×</button>
+        </div>
+        <p class="eyebrow">A FRESH START</p>
+        <h2 id="dialog-title">Create an account</h2>
+        <p class="dialog-copy">Choose an account number and add an opening balance to get started.</p>
+        <label class="field-label" for="account-name">Your name</label>
+        <input class="text-input" id="account-name" name="name" type="text" autocomplete="name" maxlength="60" placeholder="e.g. Alex Morgan" required>
+        <label class="field-label" for="account-id">Choose an account number</label>
+        <input class="text-input" id="account-id" name="id" type="number" min="1" step="1" inputmode="numeric" placeholder="Choose a unique account number" required>
+        <label class="field-label" for="opening-balance">First deposit</label>
+        <div class="amount-input-wrap">
+          <span aria-hidden="true">$</span>
+          <input id="opening-balance" name="balance" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" required>
+        </div>
+        <p class="form-error" id="account-error" role="alert"></p>
+        <button class="button button-primary dialog-submit" type="submit">Create account <span aria-hidden="true">→</span></button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
