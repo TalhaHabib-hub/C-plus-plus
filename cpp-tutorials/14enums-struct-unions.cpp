@@ -1,6 +1,8 @@
 // #include<iostream>
 // using namespace std;
 
+//Jibran
+
 // //if security is not that much concern in your program for your data use structures otherwise use classes for security and also for functions and data envolment
 // typedef struct employee//i just wrote typedef infront of struct epmployee and also after closing curly brace it wrote ep it can be anything the benefit is that for calling it i will not have to write ' struct employee ' and can call it by just writing ep, typedef simply means that the thing to which i was calling struct employ now i want to call it just ep
 // {
